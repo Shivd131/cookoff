@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0D0D0D;
+}
+
+::-webkit-scrollbar {
+  width: 0rem;
+
+}
+
+::-webkit-scrollbar-track {
+
+  border-radius: 0rem;
+
+}
+
+.no-selection {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.one {
+  -webkit-mask-image: url(../assets/mask.svg);
+  mask-image: url(../assets/mask.svg);
+
+  -webkit-mask-poisition: top left;
+  mask-position: top left;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-size: 250px 250px;
+  mask-size: 250px 250px
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #EB5939;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 0.5s, height 0.5s;
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  /* padding: 20px;
+  font-size: 24px; Set your desired font size */
+  transition: color 0.5s;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+  height: 100%;
+}
+
+.container:hover .text {
+  color: #0D0D0D;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto:wght@700&display=swap');
+
+@font-face {
+  font-family: Proxima;
+  src: url(./../../public/ProximaNovaFont.otf);
+}
+
+#proxima {
+  font-family: Proxima;
+}
+
+#roboto {
+  font-family: Roboto;
+}
